@@ -1,0 +1,37 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 2rem 4rem;
+  z-index: 999;
+}
+
+.navbar__logo {
+  width: 10rem;
+  object-fit: contain;
+}
+.navbar__menu-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar__menu-links a,
+.navbar__menu-right a {
+  font-size: 1.3rem;
+  margin-right: 2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+
+  padding: 0.7rem 1.4rem;
+  border-radius: 1rem;
+  transition: all 1s;
+}
+.navbar__menu-links a:hover,
+.navbar__menu-right a:hover {
+  background: rgb(153, 153, 153, 0.4);
+}
+.navbar__menu-icon {
+  font-size: 1.7rem;
+}
