@@ -19,6 +19,7 @@
 }
 .navbar__menu-links a,
 .navbar__menu-right a {
+  flex-wrap: nowrap;
   font-size: 1.3rem;
   margin-right: 2rem;
   font-weight: 500;
@@ -28,10 +29,54 @@
   border-radius: 1rem;
   transition: all 1s;
 }
+.navbar__menu-right a :last-child {
+  margin-right: 0;
+}
 .navbar__menu-links a:hover,
 .navbar__menu-right a:hover {
   background: rgb(153, 153, 153, 0.4);
+  cursor: pointer;
 }
 .navbar__menu-icon {
   font-size: 1.7rem;
+}
+
+.navbar__side-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  bottom: 0;
+  background: #fff;
+  width: 30rem;
+
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  padding: 4rem 2rem;
+  box-shadow: 1rem 1.2rem 1.5rem var(--primary-color);
+  transition: right 0.4s;
+}
+
+.side-nav__show {
+  right: 0;
+}
+.navbar__side-nav div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.navbar__side-nav__icon {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+.navbar__side-nav a {
+  padding: 1rem 0;
+}
+
+@media screen and (max-width: 850px) {
+  .navbar__menu-links {
+    display: none;
+  }
 }
